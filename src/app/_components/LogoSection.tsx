@@ -10,8 +10,8 @@ export default function LogoSection() {
   ];
 
   return (
-    <section className=" mt-10">
-      <div className=" rounded-2xl py-6 px-4 md:px-10">
+    <section className="container mt-10">
+      <div className=" rounded-2xl py-6 ">
         <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 md:gap-10">
           {logos.map((logo, i) => (
             <div

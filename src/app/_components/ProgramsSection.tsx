@@ -29,7 +29,7 @@ export default function ProgramsSection() {
   ];
 
   return (
-    <section className=" mt-20">
+    <section className="container mt-20">
       {/* Title (نفس السكشن اللي قبله) */}
       <div className="text-center space-y-3 mb-12">
         <h2 className="text-2xl md:text-3xl font-medium">
@@ -42,9 +42,10 @@ export default function ProgramsSection() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+        {" "}
         {programs.map((item, index) => (
-          <div key={item.id} className="text-center space-y-4 relative">
+          <div key={item.id} className="text-center space-y-4 relative w-full">
             {/* Number + line */}
             <div className="flex items-center justify-start gap-4">
               {/* الرقم */}
@@ -54,7 +55,7 @@ export default function ProgramsSection() {
               {/* {index !== programs.length - 1 && (
                 <div className="hidden lg:block flex-1 border-t-2 border-dashed border-primary" />
               )} */}
-                <div className=" flex-1 border-t-2 border-dashed border-primary" />
+              <div className=" flex-1 border-t-2 border-dashed border-primary" />
             </div>
 
             {/* Title */}
@@ -72,7 +73,7 @@ export default function ProgramsSection() {
                 alt={item.title}
                 width={300}
                 height={200}
-                className="rounded-xl w-full h-[180px] object-cover"
+                className="rounded-xl w-full h-[200px] object-cover"
               />
             </div>
           </div>

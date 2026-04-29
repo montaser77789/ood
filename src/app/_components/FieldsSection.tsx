@@ -55,8 +55,9 @@ export default function FieldsSection() {
   ];
 
   return (
-    <section className=" mt-20">
-      <div className="flex flex-col md:flex-row justify-between items-center">
+    <section className=" mt-20 bg-[#FBFBFB] py-10">
+    <div className="container">
+          <div className="flex flex-col md:flex-row justify-between items-center">
         {/* Title */}
         <div className="text-center space-y-3 mb-3 md:mb-12 text-right">
           <h2 className="text-2xl md:text-3xl font-medium">
@@ -102,6 +103,7 @@ export default function FieldsSection() {
           swiper.navigation.update();
         }}
         breakpoints={{
+          480: { slidesPerView: 1.5 },
           640: { slidesPerView: 1.5 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 2.5 },
@@ -146,6 +148,9 @@ export default function FieldsSection() {
           </SwiperSlide>
         ))}
       </Swiper>
+    </div>
+
+
     </section>
   );
 }

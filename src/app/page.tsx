@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeroSection from "./_components/HeroSection";
 import LogoSection from "./_components/LogoSection";
 import ServicesSection from "./_components/ServicesSection";
@@ -8,7 +7,7 @@ import TestimonialSection from "./_components/TestimonialSection";
 
 export default function Home() {
   return (
-    <main className="px-4 md:px-10">
+    <main className="">
       <HeroSection />
       <LogoSection />
       <ServicesSection />

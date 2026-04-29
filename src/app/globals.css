@@ -51,7 +51,7 @@ body {
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: #ffffff;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -59,7 +59,7 @@ body {
   --popover-foreground: oklch(0.145 0 0);
   --primary: #008798;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: #22A3C1;
+  --secondary: #22a3c1;
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -128,5 +128,15 @@ body {
   }
   html {
     @apply font-sans;
+  }
+}
+
+.container {
+  @apply mx-auto px-4! md:px-14!;
+}
+
+@media (width >= 48rem) and (width < 64rem) {
+  .container {
+    padding-inline: 0 !important;
   }
 }

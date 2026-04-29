@@ -15,14 +15,14 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className=" mt-4">
+    <section className="container mt-4">
       <div className="relative rounded-[30px] overflow-hidden">
         {/* Swiper */}
         <Swiper
           modules={[Autoplay]}
           loop
           autoplay={{ delay: 4000, disableOnInteraction: false }}
-          className="h-[500px]  md:h-[650px]"
+          className="h-[550px]  md:h-[650px]"
         >
           {slides.map((img, i) => (
             <SwiperSlide key={i}>

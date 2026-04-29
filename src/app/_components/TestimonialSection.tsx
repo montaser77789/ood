@@ -23,7 +23,7 @@ export default function TestimonialSection() {
   ];
 
   return (
-    <section className="mt-20 ">
+    <section className="mt-20 container">
       {/* Title */}
       <div className="text-center space-y-3 mb-10">
         <h2 className="text-2xl md:text-3xl font-medium">اراء العملاء</h2>
@@ -44,19 +44,18 @@ export default function TestimonialSection() {
       >
         {testimonials.map((item, i) => (
           <SwiperSlide key={i}>
+            {/* Quote */}
+            <div className="text-primary text-6xl md:text-[80px] font-bold leading-none">
+              “
+            </div>
             <div className="text-right space-y-4  mx-auto">
-              {/* Quote */}
-              <div className="text-primary text-6xl md:text-[80px] font-bold leading-none">
-                “
-              </div>
-
               {/* Title */}
               <h3 className="text-2xl md:text-3xl font-bold text-primary">
                 "شريك موثوق في التحول الرقمي"
               </h3>
 
               {/* Text */}
-              <p className="text-lg md:text-xl text-primary leading-loose">
+              <p className="text-lg md:text-xl text-primary leading-loose line-clamp-4">
                 {item.text}
               </p>
 
