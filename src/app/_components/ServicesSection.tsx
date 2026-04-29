@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, BrainCircuit } from "lucide-react";
+import { TbTargetArrow } from "react-icons/tb";
+import { LuBrainCircuit } from "react-icons/lu";
 
 export default function ServicesSection() {
   return (
@@ -21,14 +23,17 @@ export default function ServicesSection() {
         <div className="relative">
           <div className="flex flex-col md:flex-row-reverse items-center gap-6">
             {/* Image */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 relative">
               <Image
-                src="/services/2952fec2b5e1e0a44e5d2bb5b77223be9c4d8480.png"
+                src="/services/c6a6a3a6d901d78e69cf4d895d050dad4921eeab.png"
                 alt="service"
-                width={600}
-                height={400}
-                className="rounded-xl object-cover w-full h-[250px] md:h-[320px]"
+                width={800}
+                height={800}
+                className="rounded-xl   w-full h-full  z-100 "
               />
+              <div className="absolute top-0 right-0  z-100 bg-primary w-9 h-9 md:w-20 md:h-20 rounded-full flex items-center justify-center">
+                <LuBrainCircuit className="text-white text-2xl md:text-5xl" />
+              </div>
             </div>
 
             {/* Content */}
@@ -54,14 +59,17 @@ export default function ServicesSection() {
         <div className=" rounded-2xl p-4 md:p-6 mb-8">
           <div className="flex flex-col md:flex-row items-center gap-6">
             {/* Image */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 relative">
               <Image
-                src="/services/c6a6a3a6d901d78e69cf4d895d050dad4921eeab.png"
+                src="/services/2952fec2b5e1e0a44e5d2bb5b77223be9c4d8480.png"
                 alt="service"
-                width={600}
-                height={400}
-                className="rounded-xl object-cover w-full h-[250px] md:h-[320px]"
+                width={800}
+                height={800}
+                className="rounded-xl   w-full h-full  z-100 "
               />
+              <div className="absolute top-0 left-0  z-100 bg-primary w-9 h-9 md:w-20 md:h-20 rounded-full flex items-center justify-center">
+                <TbTargetArrow className="text-white text-2xl md:text-5xl" />
+              </div>
             </div>
 
             {/* Content */}

@@ -1,18 +1,19 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowUpLeft, Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { Pages, Routes } from "../constants/enum";
+import Link from "../Link/link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
-    { name: "الرئيسية", href: "#" },
-    { name: "من نحن", href: "#" },
+    { name: "الرئيسية", href: `${Routes.HOME}`},
+    { name: "من نحن", href: `/${Pages.WHO_ARE_YOU}`},
     { name: "خدماتنا", href: "#" },
     { name: "رؤيتنا", href: "#" },
     { name: "البرامج", href: "#" },
