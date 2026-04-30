@@ -15,7 +15,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="container mt-4">
+    <section className="sectioncontainer mt-4">
       <div className="relative rounded-[30px] overflow-hidden">
         {/* Swiper */}
         <Swiper

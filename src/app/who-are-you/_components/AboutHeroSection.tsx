@@ -6,7 +6,7 @@ import { IoSparklesOutline } from "react-icons/io5";
 
 export default function AboutHeroSection() {
   return (
-    <section className="mt-6 container">
+    <section className="mt-6 sectioncontainer">
       <div className="relative overflow-hidden rounded-[30px]">
         {/* Background */}
         <div className="relative h-[calc(100vh-120px)] w-full">

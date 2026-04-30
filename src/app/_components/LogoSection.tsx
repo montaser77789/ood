@@ -16,7 +16,7 @@ export default function LogoSection() {
   ];
 
   return (
-    <section className="mt-10 px-4 md:px-10">
+    <section className="mt-10 ">
       <div className="py-6">
         <Swiper
           modules={[Autoplay]}
@@ -45,7 +45,7 @@ export default function LogoSection() {
                   alt="client logo"
                   width={120}
                   height={60}
-                  className="object-contain  "
+                  className="object-contain"
                 />
               </div>
             </SwiperSlide>

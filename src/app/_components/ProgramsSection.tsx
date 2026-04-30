@@ -29,7 +29,7 @@ export default function ProgramsSection() {
   ];
 
   return (
-    <section className="container mt-20">
+    <section className="sectioncontainer mt-20">
       {/* Title (نفس السكشن اللي قبله) */}
       <div className="text-center space-y-3 mb-12">
         <h2 className="text-2xl md:text-3xl font-medium">

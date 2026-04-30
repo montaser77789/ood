@@ -45,7 +45,7 @@ export default function TeamSection() {
   ];
 
   return (
-    <section className="mt-20 container">
+    <section className="mt-20 sectioncontainer">
       {/* Header - العنوان لوحده في الشمال */}
       <div className="text-right mb-10">
         <h2 className="text-2xl md:text-3xl font-bold">

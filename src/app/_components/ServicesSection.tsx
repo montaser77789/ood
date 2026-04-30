@@ -7,7 +7,7 @@ import { LuBrainCircuit } from "react-icons/lu";
 export default function ServicesSection() {
   return (
     <section className="mt-16 bg-[#FBFBFB]  py-10">
-      <div className="container">
+      <div className="sectioncontainer">
         {/* Title */}
         <div className="text-center space-y-3 mb-10">
           <h2 className="text-2xl md:text-3xl font-medium">

@@ -67,7 +67,7 @@ export default function FieldsSection() {
 
   return (
     <section className="mt-20 bg-[#FBFBFB] py-10">
-      <div className="container">
+      <div className="sectioncontainer">
         {/* Title */}
         <div className="text-center space-y-3 mb-3 md:mb-12 text-right">
           <h2 className="text-2xl md:text-3xl font-medium">

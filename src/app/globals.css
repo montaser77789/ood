@@ -131,15 +131,10 @@ body {
   }
 }
 
-.container {
-  @apply mx-auto px-4! md:px-14!;
+.sectioncontainer {
+  @apply mx-auto px-4! md:px-12!;
 }
 
-@media (width >= 48rem) and (width < 64rem) {
-  .container {
-    padding-inline: 0 !important;
-  }
-}
 .PhoneInput {
   display: flex;
   align-items: center;

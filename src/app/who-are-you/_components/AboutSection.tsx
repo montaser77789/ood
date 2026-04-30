@@ -22,7 +22,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="mt-20 container">
+    <section className="mt-20 sectioncontainer">
       {/* Title */}
       <div className="text-center space-y-3 mb-12">
         <h2 className="text-2xl md:text-3xl font-medium">من نحن</h2>
