@@ -140,3 +140,16 @@ body {
     padding-inline: 0 !important;
   }
 }
+.PhoneInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  direction: ltr;
+}
+
+.PhoneInput input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}

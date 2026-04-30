@@ -12,12 +12,12 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
-    { name: "الرئيسية", href: `${Routes.HOME}`},
-    { name: "من نحن", href: `/${Pages.WHO_ARE_YOU}`},
+    { name: "الرئيسية", href: `${Routes.HOME}` },
+    { name: "من نحن", href: `/${Pages.WHO_ARE_YOU}` },
     { name: "خدماتنا", href: "#" },
     { name: "رؤيتنا", href: "#" },
     { name: "البرامج", href: "#" },
-    { name: "فريق العمل", href: "#" },
+    { name: "التواصل", href: `/${Pages.CONTACT_US}` },
   ];
 
   // Scroll effect

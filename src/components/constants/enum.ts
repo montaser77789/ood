@@ -18,7 +18,7 @@ export enum Pages {
   HOME = "home",
   LOGIN = "signin",
   WHO_ARE_YOU = "who-are-you",
-
+  CONTACT_US = "contact-us",
 }
 
 export enum InputTypes {

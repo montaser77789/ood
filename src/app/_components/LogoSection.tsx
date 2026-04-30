@@ -1,3 +1,9 @@
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
 import Image from "next/image";
 
 export default function LogoSection() {
@@ -10,24 +16,41 @@ export default function LogoSection() {
   ];
 
   return (
-    <section className="container mt-10">
-      <div className=" rounded-2xl py-6 ">
-        <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 md:gap-10">
-          {logos.map((logo, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-center opacity-70  hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-            >
-              <Image
-                src={logo}
-                alt="client logo"
-                width={120}
-                height={60}
-                className="object-contain"
-              />
-            </div>
+    <section className="mt-10 px-4 md:px-10">
+      <div className="py-6">
+        <Swiper
+          modules={[Autoplay]}
+          loop
+          speed={4000} // سرعة الحركة (كل ما كبرت = أبطأ وأنعم)
+          autoplay={{
+            delay: 0, // مهم جدًا عشان يبقى continuous
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          slidesPerView={2}
+          spaceBetween={20}
+          breakpoints={{
+            640: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            1024: { slidesPerView: 5 },
+          }}
+          allowTouchMove={false} // يخليه زي شريط أخبار (بدون سحب)
+        >
+          {/* نكرر اللوجوهات عشان الحركة تبقى seamless */}
+          {[...logos, ...logos].map((logo, i) => (
+            <SwiperSlide key={i}>
+              <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition">
+                <Image
+                  src={logo}
+                  alt="client logo"
+                  width={120}
+                  height={60}
+                  className="object-contain  "
+                />
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
