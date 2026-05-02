@@ -19,6 +19,8 @@ export enum Pages {
   LOGIN = "signin",
   WHO_ARE_YOU = "who-are-you",
   CONTACT_US = "contact-us",
+  PROGRAM = "projram",
+  SERVICS = "services"
 }
 
 export enum InputTypes {

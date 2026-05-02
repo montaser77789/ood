@@ -1,6 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { projram } from "@/app/projram/[slug]/page";
 
 export default function ProgramsSection() {
+  // Mapping between section programs and actual projram data
+  const getProgramSlug = (title: string) => {
+    const mapping: Record<string, string> = {
+      "برامج القيادة": "برامج-قيادية-تصنع-الأثر",
+      "برامج التحول الرقمي": "برامج-التحول-الرقمي",
+      "البرامج الدولية": "برامج-دولية-بمعايير-عالمية",
+      "البرامج التطويرية": "مسارات-التطوير-المؤسسي-المتكاملة",
+    };
+    return mapping[title] || "";
+  };
+
   const programs = [
     {
       id: 1,
@@ -30,7 +45,7 @@ export default function ProgramsSection() {
 
   return (
     <section className="sectioncontainer mt-20">
-      {/* Title (نفس السكشن اللي قبله) */}
+      {/* Title */}
       <div className="text-center space-y-3 mb-12">
         <h2 className="text-2xl md:text-3xl font-medium">
           برامج تطويرية لمستقبل أفضل
@@ -43,41 +58,68 @@ export default function ProgramsSection() {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
-        {" "}
-        {programs.map((item, index) => (
-          <div key={item.id} className="text-center space-y-4 relative w-full">
-            {/* Number + line */}
-            <div className="flex items-center justify-start gap-4">
-              {/* الرقم */}
-              <div className="bg-primary text-white w-14 h-14 flex items-center justify-center rounded-xl text-xl font-bold text-right">
-                {item.id}
+        {programs.map((item, index) => {
+          const slug = getProgramSlug(item.title);
+          
+          return (
+            <div key={item.id} className="text-center space-y-4 relative w-full">
+              {/* Number + line */}
+              <div className="flex items-center justify-start gap-4">
+                <div className="bg-primary text-white w-14 h-14 flex items-center justify-center rounded-xl text-xl font-bold text-right">
+                  {item.id}
+                </div>
+                <div className="flex-1 border-t-2 border-dashed border-primary" />
               </div>
-              {/* {index !== programs.length - 1 && (
-                <div className="hidden lg:block flex-1 border-t-2 border-dashed border-primary" />
-              )} */}
-              <div className=" flex-1 border-t-2 border-dashed border-primary" />
+
+              {/* Title */}
+              <h3 className="text-lg font-bold text-right">{item.title}</h3>
+
+              {/* Desc */}
+              <p className="text-black text-sm md:text-base font-normal leading-loose text-right">
+                {item.desc}
+              </p>
+
+              {/* Image */}
+              <div className="mt-4 relative group">
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  width={300}
+                  height={200}
+                  className="rounded-xl w-full h-[200px] object-cover"
+                />
+                
+                {/* Overlay with button on hover */}
+                <div className="absolute inset-0 bg-black/60 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Button
+                    asChild
+                    variant="secondary"
+                    className="gap-2 bg-white hover:bg-primary hover:text-white transition-all duration-300"
+                  >
+                    <Link href={`/projram/${slug}`}>
+                      تفاصيل البرنامج
+                      <ArrowLeft size={18} />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Button below image (alternative - always visible) */}
+              <div className="pt-2">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="w-full gap-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 group"
+                >
+                  <Link href={`/projram/${slug}`}>
+                    تفاصيل البرنامج
+                    <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
             </div>
-
-            {/* Title */}
-            <h3 className="text-lg font-bold text-right">{item.title}</h3>
-
-            {/* Desc */}
-            <p className="text-black text-sm md:text-base font-normal leading-loose text-right">
-              {item.desc}
-            </p>
-
-            {/* Image */}
-            <div className="mt-4">
-              <Image
-                src={item.img}
-                alt={item.title}
-                width={300}
-                height={200}
-                className="rounded-xl w-full h-[200px] object-cover"
-              />
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

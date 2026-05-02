@@ -3,7 +3,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import Link from "@/components/Link/link";
+import { Pages, Routes } from "@/components/constants/enum";
 
 // مهم جدًا
 
@@ -59,18 +61,18 @@ export default function HeroSection() {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-              {/* Primary */}
-              <Button className="px-6 md:px-12 py-5 rounded-xl bg-secondary text-white hover:bg-secondary/90">
-                اطلب استشارة الآن
-              </Button>
-
-              {/* Outline */}
-              <Button
-                variant="outline"
-                className="px-6 md:px-12 py-5 rounded-xl border-white text-white hover:bg-white hover:text-black"
+              <Link
+                href={`${Pages.CONTACT_US}`}
+                className={`${buttonVariants({ variant: "default" })} , px-6 md:px-12 py-5 rounded-xl bg-secondary text-white hover:bg-secondary/90`}
+              >
+                <span> اطلب استشارة الآن </span>
+              </Link> 
+              <Link
+                href={`${Pages.SERVICS}`}
+                className={`${buttonVariants({ variant: "outline" })} , px-6 md:px-12 py-5 rounded-xl border-white text-white hover:bg-white hover:text-black`}
               >
                 تعرف على خدماتنا
-              </Button>
+              </Link>
             </div>
           </div>
         </div>

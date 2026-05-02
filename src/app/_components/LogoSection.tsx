@@ -21,14 +21,14 @@ export default function LogoSection() {
         <Swiper
           modules={[Autoplay]}
           loop
-          speed={4000} // سرعة الحركة (كل ما كبرت = أبطأ وأنعم)
+          speed={3000} // سرعة الحركة (كل ما كبرت = أبطأ وأنعم)
           autoplay={{
             delay: 0, // مهم جدًا عشان يبقى continuous
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
           slidesPerView={2}
-          spaceBetween={20}
+          spaceBetween={30}
           breakpoints={{
             640: { slidesPerView: 3 },
             768: { slidesPerView: 4 },
