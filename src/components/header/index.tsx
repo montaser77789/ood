@@ -17,7 +17,7 @@ export default function Header() {
   const navLinks = [
     { name: "الرئيسية", href: `${Routes.HOME}` },
     { name: "من نحن", href: `/${Pages.WHO_ARE_YOU}` },
-    { name: "فريق العمل", href: `/` },
+    // { name: "فريق العمل", href: `/` },
     { name: "خدماتنا", href: `/${Pages.SERVICS}` },
     { name: "التواصل", href: `/${Pages.CONTACT_US}` },
     { name: "البرامج", href: "#", isDropdown: true },

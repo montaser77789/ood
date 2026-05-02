@@ -19,7 +19,7 @@ export default function ProjramHeroSection({
     <section className="mt-6 sectioncontainer">
       <div className="relative overflow-hidden rounded-[30px]">
         {/* Background */}
-        <div className="relative h-[calc(100vh-120px)] w-full">
+        <div className="relative  h-125 md:h-[calc(100vh-120px)] w-full">
           {/* Background Image */}
           {image && (
             <Image src={`${image}`} alt="about" fill className="object-cover" />

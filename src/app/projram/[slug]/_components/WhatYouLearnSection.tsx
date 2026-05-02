@@ -25,7 +25,7 @@ import {
   RefreshCw,
   Compass,
   Award,
-  Cpu
+  Cpu,
 } from "lucide-react";
 const icons = {
   Target,
@@ -45,8 +45,7 @@ const icons = {
   RefreshCw,
   Compass,
   Award,
-  Cpu
-  
+  Cpu,
 };
 type IconName = keyof typeof icons;
 
@@ -57,7 +56,7 @@ export default function WhatYouLearnSection({
 }) {
   return (
     <section className="mt-20 px-4 md:px-10">
-      <div className=" rounded-[30px] p-6 md:p-10 text-primary">
+      <div className=" rounded-[30px]  text-primary">
         {/* Title */}
         <div className="text-center space-y-3 mb-10">
           <h2 className="text-2xl md:text-3xl font-bold">
@@ -94,7 +93,7 @@ export default function WhatYouLearnSection({
                         <Icon size={20} />
                       </div>
 
-                      <span className="text-sm md:text-base font-medium ">
+                      <span className="text-sm md:text-base font-medium text-right">
                         {item.title}
                       </span>
                     </div>

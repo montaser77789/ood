@@ -55,7 +55,7 @@ export default function TargetAudienceSection({
                       : [...prev, i], // يضيف لو مش موجود
                 );
               }}
-              className={`cursor-pointer rounded-2xl p-6 flex flex-col items-center justify-center text-center space-y-4 transition-all duration-300
+              className={`cursor-pointer rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center space-y-4 transition-all duration-300
               ${
                 isActive
                   ? "bg-[#004D54] text-white shadow-md"
@@ -63,13 +63,10 @@ export default function TargetAudienceSection({
               }`}
             >
               <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-xl">
-                <Icon
-                  size={28}
-                  className={isActive ? "text-white" : "text-primary"}
-                />
+                <Icon className={isActive ? "text-white" : "text-primary"} />
               </div>
 
-              <h3 className="text-base md:text-lg font-semibold">
+              <h3 className="text-sm md:text-lg font-semibold">
                 {item.title}
               </h3>
             </div>

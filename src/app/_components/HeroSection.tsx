@@ -24,7 +24,7 @@ export default function HeroSection() {
           modules={[Autoplay]}
           loop
           autoplay={{ delay: 4000, disableOnInteraction: false }}
-          className="h-[550px]  md:h-[650px]"
+          className="h-125 md:h-[calc(100vh-120px)]"
         >
           {slides.map((img, i) => (
             <SwiperSlide key={i}>
@@ -66,7 +66,7 @@ export default function HeroSection() {
                 className={`${buttonVariants({ variant: "default" })} , px-6 md:px-12 py-5 rounded-xl bg-secondary text-white hover:bg-secondary/90`}
               >
                 <span> اطلب استشارة الآن </span>
-              </Link> 
+              </Link>
               <Link
                 href={`${Pages.SERVICS}`}
                 className={`${buttonVariants({ variant: "outline" })} , px-6 md:px-12 py-5 rounded-xl border-white text-white hover:bg-white hover:text-black`}

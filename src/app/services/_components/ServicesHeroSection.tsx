@@ -11,7 +11,7 @@ export default function ServicesHeroSection() {
     <section className="mt-6 sectioncontainer">
       <div className="relative overflow-hidden rounded-[30px]">
         {/* Background */}
-        <div className="relative h-[calc(100vh-120px)] w-full">
+        <div className="relative h-125 md:h-[calc(100vh-120px)] w-full">
           {/* Background Image */}
           <Image
             src="/servicespage/d78a19cd29a9f244e534ba8e977221e86542c935.jpg"
